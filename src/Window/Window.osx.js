@@ -5,7 +5,7 @@ import TitleBarOSX from '../TitleBar/TitleBar.osx';
 
 var styles = {
   window: {
-    WebkitUserSelect: 'none',
+    userSelect: 'none',
     cursor: 'default',
     backgroundColor: '#ececec',
     display: 'flex',

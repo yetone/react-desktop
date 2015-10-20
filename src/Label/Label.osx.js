@@ -3,7 +3,7 @@ import { mergeStyles } from '../Styling';
 
 var styles = {
   label: {
-    WebkitUserSelect: 'none',
+    userSelect: 'none',
     cursor: 'default',
     fontFamily: '"San Francisco", "Helvetica Neue", "Lucida Grande", Arial, sans-serif',
     fontSize: '13px',

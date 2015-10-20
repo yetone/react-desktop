@@ -5,7 +5,7 @@ import WindowState from '../WindowState';
 
 var styles = {
   button: {
-    WebkitUserSelect: 'none',
+    userSelect: 'none',
     cursor: 'default',
     backgroundColor: '#ffffff',
     outline: 'none',
@@ -26,7 +26,7 @@ var styles = {
     fontSize: '13px',
 
     ':active': {
-      backgroundImage: '-webkit-linear-gradient(top, #4c98fe 0%, #0564e3 100%)',
+      backgroundImage: 'linear-gradient(top, #4c98fe 0%, #0564e3 100%)',
       borderTopColor: '#247fff',
       borderBottomColor: '#003ddb',
       borderLeftColor: '#125eed',
@@ -36,7 +36,7 @@ var styles = {
   },
 
   blue: {
-    backgroundImage: '-webkit-linear-gradient(top, #6cb3fa 0%, #087eff 100%)',
+    backgroundImage: 'linear-gradient(top, #6cb3fa 0%, #087eff 100%)',
     borderTopColor: '#4ca2f9',
     borderBottomColor: '#015cff',
     borderLeftColor: '#267ffc',
@@ -44,7 +44,7 @@ var styles = {
     color: 'rgba(255, 255, 255, .9)',
 
     ':active': {
-      backgroundImage: '-webkit-linear-gradient(top, #4c98fe 0%, #0564e3 100%)',
+      backgroundImage: 'linear-gradient(top, #4c98fe 0%, #0564e3 100%)',
       borderTopColor: '#247fff',
       borderBottomColor: '#003ddb',
       borderLeftColor: '#125eed',

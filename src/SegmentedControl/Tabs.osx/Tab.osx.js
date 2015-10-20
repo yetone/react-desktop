@@ -4,7 +4,7 @@ import WindowState from '../../WindowState';
 
 var styles = {
   tab: {
-    WebkitUserSelect: 'none',
+    userSelect: 'none',
     cursor: 'default',
     backgroundColor: '#ffffff',
     borderTopWidth: '1px',
@@ -49,7 +49,7 @@ var styles = {
   },
 
   selected: {
-    backgroundImage: '-webkit-linear-gradient(top, #6cb3fa 0%, #087eff 100%)',
+    backgroundImage: 'linear-gradient(top, #6cb3fa 0%, #087eff 100%)',
     borderTopColor: '#4ca2f9',
     borderBottomColor: '#015cff',
     borderLeftColor: '#267ffc',
@@ -61,7 +61,7 @@ var styles = {
   },
 
   selectedActive: {
-    backgroundImage: '-webkit-linear-gradient(top, #4c98fe 0%, #0564e3 100%) !important',
+    backgroundImage: 'linear-gradient(top, #4c98fe 0%, #0564e3 100%) !important',
     borderTopColor: '#247fff !important',
     borderBottomColor: '#003ddb !important',
     borderLeftColor: '#125eed !important',
@@ -70,7 +70,7 @@ var styles = {
   },
 
   selectedUnfocused: {
-    backgroundImage: '-webkit-linear-gradient(top, #e5e5e5 0%, #e5e5e5 100%)',
+    backgroundImage: 'linear-gradient(top, #e5e5e5 0%, #e5e5e5 100%)',
     borderTopColor: '#c7c7c7',
     borderBottomColor: '#a6a6a6',
     borderRightColor: '#b7b7b7',

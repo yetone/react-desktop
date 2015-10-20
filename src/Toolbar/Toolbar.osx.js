@@ -3,7 +3,7 @@ import { mergeStyles } from '../Styling';
 
 var styles = {
   toolbar: {
-    WebkitUserSelect: 'none',
+    userSelect: 'none',
     cursor: 'default'
   }
 };

@@ -4,7 +4,7 @@ import WindowState from '../../WindowState';
 
 var styles = {
   button: {
-    WebkitUserSelect: 'none',
+    userSelect: 'none',
     WebkitAppRegion: 'no-drag',
     cursor: 'default',
     width: '46px',

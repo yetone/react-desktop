@@ -5,7 +5,7 @@ import Tabs from './Tabs.osx/Tabs.osx';
 
 var styles = {
   segmentedControl: {
-    WebkitUserSelect: 'none',
+    userSelect: 'none',
     cursor: 'default'
   }
 };

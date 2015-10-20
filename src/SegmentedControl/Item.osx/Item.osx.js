@@ -3,8 +3,8 @@ import { mergeStyles } from '../../Styling';
 
 var styles = {
   item: {
-    WebkitUserSelect: 'none',
-    cursor: 'default',
+    userSelect: 'none',
+    cursor: 'default'
   }
 };
 

@@ -6,7 +6,7 @@ import TitleBarWindows from '../TitleBar/TitleBar.windows';
 
 var styles = {
   window: {
-    WebkitUserSelect: 'none',
+    userSelect: 'none',
     cursor: 'default',
     backgroundColor: '#ffffff',
     display: 'flex',

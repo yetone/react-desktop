@@ -4,7 +4,7 @@ import SegmentedControl from '../SegmentedControl';
 
 var styles = {
   box: {
-    WebkitUserSelect: 'none',
+    userSelect: 'none',
     cursor: 'default',
     backgroundColor: 'rgba(0, 0, 0, .04)',
     borderWidth: '1px',

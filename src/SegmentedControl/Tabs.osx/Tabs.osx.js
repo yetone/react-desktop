@@ -3,7 +3,7 @@ import Tab from './Tab.osx';
 
 var styles = {
   tabs: {
-    WebkitUserSelect: 'none',
+    userSelect: 'none',
     cursor: 'default',
     position: 'absolute',
     top: '-11px',

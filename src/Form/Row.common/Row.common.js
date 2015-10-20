@@ -13,7 +13,7 @@ import ButtonWindows from '../../Button/Button.windows';
 
 var styles = {
   row: {
-    WebkitUserSelect: 'none',
+    userSelect: 'none',
     cursor: 'default',
     display: 'flex',
     justifyContent: 'center',

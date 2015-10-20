@@ -6,7 +6,7 @@ import Controls from './Controls.windows/Controls';
 var styles = {
   titleBar: {
     userSelect: 'none',
-    appRegion: 'drag',
+    WebkitAppRegion: 'drag',
     cursor: 'default',
     display: 'flex',
     alignItems: 'center',
@@ -15,7 +15,7 @@ var styles = {
   },
 
   title: {
-    WebkitUserSelect: 'none',
+    userSelect: 'none',
     cursor: 'default',
     paddingLeft: '12px',
     fontFamily: '"Segoe UI", "Arial"',

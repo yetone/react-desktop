@@ -3,7 +3,7 @@ import Styling, { mergeStyles, applyStyle } from '../Styling';
 
 var styles = {
   textField: {
-    WebkitUserSelect: 'none',
+    userSelect: 'none',
     borderWidth: '1px',
     borderStyle: 'solid',
     borderColor: '#b0b0b0',

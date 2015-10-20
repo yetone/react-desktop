@@ -1,17 +1,17 @@
 import React, { Component, PropTypes } from 'react';
 import WindowState from '../WindowState';
-import { mergeStyles } from '../Styling';
 import Controls from './Controls.osx/Controls';
+import Radium from 'radium';
 
 var styles = {
   titleBar: {
-    WebkitUserSelect: 'none',
+    userSelect: 'none',
     WebkitAppRegion: 'drag',
     cursor: 'default',
     display: 'flex',
     alignItems: 'center',
     height: '20px',
-    backgroundImage: '-webkit-linear-gradient(top, #ededed 0, #ededed 1px, #e7e7e7 2px, #d1d1d1 100%)',
+    backgroundImage: 'linear-gradient(top, #ededed 0, #ededed 1px, #e7e7e7 2px, #d1d1d1 100%)',
     borderBottomWidth: '1px',
     borderBottomStyle: 'solid',
     borderBottomColor: '#afafaf',
@@ -25,7 +25,7 @@ var styles = {
   },
 
   unfocusedTitleBar: {
-    backgroundImage: '-webkit-linear-gradient(top, #f8f8f8 0px, #f8f8f8 2px, #f6f6f6 100%)',
+    backgroundImage: 'linear-gradient(top, #f8f8f8 0px, #f8f8f8 2px, #f6f6f6 100%)',
     borderBottomColor: '#cecece'
   },
 
@@ -36,7 +36,7 @@ var styles = {
   },
 
   title: {
-    WebkitUserSelect: 'none',
+    userSelect: 'none',
     cursor: 'default',
     fontFamily: '"San Francisco", "Helvetica Neue", "Lucida Grande", Arial, sans-serif',
     fontSize: '13px',
@@ -52,6 +52,7 @@ var styles = {
 };
 
 @WindowState
+@Radium
 class TitleBarOSX extends Component {
   static propTypes = {
     children: PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.element, React.PropTypes.array]),
@@ -74,26 +75,22 @@ class TitleBarOSX extends Component {
     };
   }
 
-  get styles() {
-    return mergeStyles(styles.titleBar, this.props.style);
-  }
-
   render() {
-    let { children, controls, title, visible, display, ...props } = this.props;
+    let { children, controls, title, visible, display, style, ...props } = this.props;
 
-    let componentStyle = this.styles;
+    let componentStyle = {...styles.titleBar, ...style};
     if (children) {
-      componentStyle = mergeStyles(componentStyle, styles.toolbar);
+      componentStyle = {...componentStyle, ...styles.toolbar};
     }
 
     let titleStyle = styles.title;
     if (this.props.controls) {
-      titleStyle = Object.assign(titleStyle, {paddingRight: '60px'});
+      titleStyle = {...titleStyle, paddingRight: '60px'};
     }
 
     if (!this.state.windowFocused) {
-      componentStyle = mergeStyles(componentStyle, styles.unfocusedTitleBar);
-      titleStyle = mergeStyles(titleStyle, styles.unfocusedTitle);
+      componentStyle = {...componentStyle, ...styles.unfocusedTitleBar};
+      titleStyle = {...titleStyle, ...styles.unfocusedTitle};
     }
 
     controls = !controls || <Controls {...this.props}/>;
@@ -103,10 +100,11 @@ class TitleBarOSX extends Component {
         </div>
       );
 
-    componentStyle = mergeStyles(componentStyle, {
+    componentStyle = {
+      ...componentStyle,
       visibility: this.state.visible ? 'visible' : 'hidden',
       display: this.state.display ? 'flex' : 'none'
-    });
+    };
 
     return (
       <div

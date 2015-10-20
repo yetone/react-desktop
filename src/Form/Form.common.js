@@ -10,7 +10,7 @@ import LabelWindows from '../TextBlock/TextBlock.windows';
 
 var styles = {
   table: {
-    WebkitUserSelect: 'none',
+    userSelect: 'none',
     cursor: 'default',
     display: 'flex',
     flexDirection: 'column',
